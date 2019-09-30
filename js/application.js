@@ -110,7 +110,6 @@ var btnContainer = document.getElementById("group");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
-    console.log("za passe")
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace("active", "");
     
