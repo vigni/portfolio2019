@@ -9,9 +9,22 @@
 //   })
 
 // });
+setTimeout(showPage,2000);
+// $.ready(function(){
+//   $("#loading").fadeOut(2000);
+//   $("#preloader").fadeOut(2000);
+// });
+// $(window).load(showPage);
+// window.onload = function () {
+//   this.showPage();
+// } 
 
-
-
+function showPage() {
+  $("#loading").fadeOut(2000);
+  $("#preloader").fadeOut(1000);
+}
+  // document.getElementById("loading").style.display = "none";
+  // document.getElementById("container-page").style.display = "block";
 
 
 (function() {
@@ -39,6 +52,45 @@
           items[i].classList.add("in-view");
         }
       }
+    }
+  
+    // listen for events
+    window.addEventListener("load", callbackFunc);
+    window.addEventListener("resize", callbackFunc);
+    window.addEventListener("scroll", callbackFunc);
+  
+  })();
+
+  (function() {
+
+    'use strict';
+  
+    // define variables
+    var items = document.querySelectorAll(".timeline li");
+    var intro = document.querySelectorAll(".about-content");
+    // check if an element is in viewport
+    // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+    function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+  
+    function callbackFunc() {
+      for (var i = 0; i < items.length; i++) {
+        if (isElementInViewport(items[i])) {
+          items[i].classList.add("in-view");
+        }
+      }
+      
+        if (isElementInViewport(intro)) {
+          intro.classList.add("in-view");
+        }
+      
     }
   
     // listen for events
@@ -116,3 +168,6 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+
+
