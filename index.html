@@ -23,25 +23,12 @@
 </head>
 
 <body>
-
-    <!-- <div id="loading">
+    <!-- Loader -->
+   <div id="loading">
             <div id="preloader">
                     <div id="loader"></div>
             </div>
-    </div> -->
-
-    <!-- <div class="loader">
-        <svg width="100" height="100" viewBox="0 0 100 100">
-            <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none">
-            </polyline>
-            <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none">
-            </polyline>
-            <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none">
-            </polyline>
-            <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none">
-            </polyline>
-        </svg>
-    </div> -->
+    </div> 
     <!-- header -->
     <div id="container-page">
         <div class="block">
@@ -49,11 +36,10 @@
                 <a href="#home-ancre"> <img id="logoImgHeader" src="img/logo-black.png" class="header-logo-home"
                         alt=""></a>
                 <nav class="header-menu-home" id="nav-ydefault">
-                    <a href="#about-ancre">A PROPOS</a>
-                    <a href="#timeline-ancre">FORMATION</a>
-                    <a href="#skills-ancre">COMPETENCES</a>
-                    <a href="#projects-ancre">PROJETS</a>
-                    <a href="#hobbies-ancre">LOISIRS</a>
+                    <a class="menu-about" href="#about-ancre">A PROPOS</a>
+                    <a class="menu-formation" href="#timeline-ancre">FORMATION</a>
+                    <a class="menu-projects" href="#projects-ancre">PROJETS</a>
+                    <a class="menu-hobbies" href="#hobbies-ancre">LOISIRS</a>
                 </nav>
             </header>
         </div>
@@ -68,7 +54,7 @@
                     <h1 class="title"> Lucas Vigni | Développeur web</h1>
                     <hr class="divider">
                     <h2 id="subtitle"></h2>
-                    <a href="about.html" class="btn-home" ><button type="button" class="btn">MES COMPETENCES</button></a>
+                    <a href="#projects-ancre" class="btn-home" ><button type="button" class="btn">MES PROJETS</button></a>
                 </div>
 
             </div>
@@ -76,17 +62,17 @@
 
         <!-- about -->
 
-        <section id="about-ancre">
+        <section id="about-ancre" >
             <div class="about-content">
                 <div class="title-about">
                     <h1>Introduction</h1>
                 </div>
-                <div class="container-fluid">
+                <div class="container-fluid ">
                     <div class="row">
                         <div class="about">
                             <div class="container-about col-6">
 
-                                <div class="text">
+                                <div class="text display-move">
 
                                     <p>Je m’appelle VIGNI Lucas, âgé de 20 ans, je suis en premiére année de master
                                         Concepteur en Architecture Informatique. Cette formation est proposé par le
@@ -100,7 +86,7 @@
                                         obtenir un titre d'ingénieur informatique.
                                     </p>
 
-                                    <div class="plus">
+                                    <div class="plus ">
                                         <a href="img/CV2019LV.pdf"><button class="btn cv">Télécharger mon
                                                 CV</button></a>
                                     </div>
@@ -108,7 +94,7 @@
                                 </div>
                             </div>
                             <div class="container-picture col-6">
-                                <div class="picture">
+                                <div class="picture display-move">
                                     <img src="img/photo.jpg" alt="">
                                 </div>
                             </div>
@@ -288,32 +274,39 @@
                     <h1>Projets</h1>
                 </div>
 
-                <div class="projects-container">
+                <div class="projects-container ">
                     <div class="list-projects">
-                        <div id="group">
+                        <div id="group" class="display-buttons">
                             <button class="btn active" onclick="filterSelection('all')">Tous</button>
                             <button class="btn" onclick="filterSelection('web')">Web</button>
                             <button class="btn" onclick="filterSelection('tma')">Tma</button>
                         </div>
                     </div>
                     <div class="projects">
-                        <div class="projects-photo">
-                            <div class="filterDiv web">
-                                <img src="img/smartleads.PNG" class="image" alt="" width="250px" height="250px">
-                                <div class="middle">
-                                    <div class="text">ERP - Symfony 4</div>
+                            <div class="projects-photo display-projects">
+                                    <div class="filterDiv web">
+                                        <img src="img/smartleads.PNG" class="image" alt="" width="250px" height="250px">
+                                        <div class="overlay"> ERP - SYMFONY 4</div>
+                                    </div>
+                                    <div class="filterDiv web">
+                
+                                        <img src="img/easyCode.PNG" class="image" alt="" width="250px" height="250px">
+                                        <div class="overlay"> ERP - Symfony 4</div>
+                
+                                    </div>
+                                    <div class="filterDiv web">
+                
+                                        <img src="img/portfolio.PNG" class="image" alt="" width="250px" height="250px">
+                                        <div class="overlay"> ERP - Symfony 4</div>
+                
+                                    </div>
+                                    <div class="filterDiv tma">
+                
+                                        <img src="img/erp.png" class="image" alt="" width="250px" height="250px">
+                                        <div class="overlay"> ERP - Symfony 4</div>
+                
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="filterDiv web">
-                                <img src="img/easyCode.PNG" alt="" class="image" width="250px" height="250px"> 
-                            </div>
-                            <div class="filterDiv web">
-                                <img src="img/logo-black.png" alt="" class="image" width="250px" height="250px"> 
-                            </div>
-                            <div class="filterDiv tma">
-                                <img src="img/erp.png" alt="" class="image" width="250px" height="250px"> 
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -327,7 +320,7 @@
                 </div>
 
                 <div class="hobbies-container">
-                    <div class="hobbies">
+                    <div class="hobbies display-move">
 
                         <div class="sticker example-1">
 
@@ -373,6 +366,7 @@
 
 <script src="js/typeit.min.js"></script>
 <script src="js/application.js"></script>
+<script src="js/apppp.js"></script>
 <script src="js/typeIt.js"></script>
 <script src="js/sticker.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>

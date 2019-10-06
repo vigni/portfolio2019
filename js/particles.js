@@ -20,7 +20,8 @@ var pJS = function(tag_id, params){
     },
     particles: {
       number: {
-        value: 400,
+        value: 100,
+        limit: 300,
         density: {
           enable: true,
           value_area: 800
@@ -754,6 +755,10 @@ var pJS = function(tag_id, params){
 
     pJS.tmp.pushing = true;
 
+    if((pJS.particles.array.length + nb) > pJS.particles.number.limit) {
+      pJS.fn.removeParticles((pJS.particles.array.length + nb)- pJS.particles.number.limit);
+    }
+    
     for(var i = 0; i < nb; i++){
       pJS.particles.array.push(
         new pJS.fn.particle(
@@ -1539,3 +1544,4 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
   xhr.send();
 
 };
+

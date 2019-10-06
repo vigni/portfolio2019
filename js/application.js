@@ -1,32 +1,18 @@
-// $("#titleAbout").hide();
+// --------------
+//Loader
+//---------------
 
-// $(document).ready(function(){
-//   document.getElementById('titleAbout').style.visibility='hidden';
-//   $(window).on("scroll", function(){ 
-//     if($(".titleAbout").is(":visible")){ 
-//       $('.titleAbout').fadeIn(500); 
-//     } 
-//   })
-
-// });
 setTimeout(showPage,2000);
-// $.ready(function(){
-//   $("#loading").fadeOut(2000);
-//   $("#preloader").fadeOut(2000);
-// });
-// $(window).load(showPage);
-// window.onload = function () {
-//   this.showPage();
-// } 
 
 function showPage() {
   $("#loading").fadeOut(2000);
   $("#preloader").fadeOut(1000);
 }
-  // document.getElementById("loading").style.display = "none";
-  // document.getElementById("container-page").style.display = "block";
 
 
+// --------------
+//Timeline
+//---------------
 (function() {
 
     'use strict';
@@ -41,6 +27,7 @@ function showPage() {
       return (
         rect.top >= 0 &&
         rect.left >= 0 &&
+        
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
       );
@@ -53,55 +40,79 @@ function showPage() {
         }
       }
     }
-  
-    // listen for events
-    window.addEventListener("load", callbackFunc);
-    window.addEventListener("resize", callbackFunc);
-    window.addEventListener("scroll", callbackFunc);
-  
-  })();
 
-  (function() {
-
-    'use strict';
-  
+    //For intro
     // define variables
-    var items = document.querySelectorAll(".timeline li");
-    var intro = document.querySelectorAll(".about-content");
-    // check if an element is in viewport
-    // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-    function isElementInViewport(el) {
-      var rect = el.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    }
+    var introHobbies = document.querySelectorAll(".display-move");
   
-    function callbackFunc() {
-      for (var i = 0; i < items.length; i++) {
-        if (isElementInViewport(items[i])) {
-          items[i].classList.add("in-view");
+    function callbackFuncIntro() {
+      for (var i = 0; i < introHobbies.length; i++) {
+        if (isElementInViewport(introHobbies[i])) {
+          introHobbies[i].classList.add("in-view");
         }
       }
-      
-        if (isElementInViewport(intro)) {
-          intro.classList.add("in-view");
-        }
-      
     }
+
+    var projects = document.querySelectorAll(".display-projects");
+
+  
+    function callbackFuncProjects() {
+      for (var i = 0; i < projects.length; i++) {
+        if (isElementInViewport(projects[i])) {
+          projects[i].classList.add("in-view");
+        }
+      }
+    }
+
+    var buttons = document.querySelectorAll(".display-buttons");
+
+  
+    function callbackFuncButtons() {
+      for (var i = 0; i < buttons.length; i++) {
+        if (isElementInViewport(buttons[i])) {
+          buttons[i].classList.add("in-view");
+        }
+      }
+    }
+
+   
+    // 
+
+  
+    // function callbackFuncProjects() {
+    //   for (var i = 0; i < intro.length; i++) {
+    //     if (isElementInViewport(intro[i])) {
+    //       intro[i].classList.add("in-view");
+    //     }
+    //   }
+    // }
+
+     //For projects
+    
   
     // listen for events
     window.addEventListener("load", callbackFunc);
     window.addEventListener("resize", callbackFunc);
     window.addEventListener("scroll", callbackFunc);
+
+    window.addEventListener("load", callbackFuncProjects);
+    window.addEventListener("resize", callbackFuncProjects);
+    window.addEventListener("scroll", callbackFuncProjects);
+
+    window.addEventListener("load", callbackFuncIntro);
+    window.addEventListener("resize", callbackFuncIntro);
+    window.addEventListener("scroll", callbackFuncIntro);
+
+    window.addEventListener("load", callbackFuncButtons);
+    window.addEventListener("resize", callbackFuncButtons);
+    window.addEventListener("scroll", callbackFuncButtons);
+
   
   })();
-
-
+  
+// ------------
   // MENU
+// ------------
 
   const header = document.getElementById('isFixed')
 
@@ -168,6 +179,7 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
 
 
 
