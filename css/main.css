@@ -1,3 +1,8 @@
+body{
+  margin-top:0px;
+  margin-left: 0px;
+}
+
 /* ----------------- */
 /* Loader */
 /* ----------------- */
@@ -29,7 +34,7 @@
     margin: -75px 0 0 -75px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #6C8CFF;
+    border-top-color: #FFAB00;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
@@ -42,7 +47,7 @@
     bottom: 5px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #cacaca;
+    border-top-color: #656668;
     -webkit-animation: spin 3s linear infinite;
     animation: spin 3s linear infinite;
 }
@@ -55,7 +60,7 @@
     bottom: 15px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #9370DB;
+    border-top-color: white;
     -webkit-animation: spin 1.5s linear infinite;
     animation: spin 1.5s linear infinite;
 }
@@ -124,13 +129,28 @@ body p,h1,h2,span,a{
   height: 100px;
 }
 
+.header .header-menu-home ul{
+  display:flex;
+  margin:0;
+  padding: 0;
+  /* max-width: 600px; */
+  /* justify-content: space-between; */
+}
+
+.header .header-menu-home li{
+  list-style-type: none;
+
+}
+
 
 .header .header-menu-home a{
   color: #222222;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   margin-right: 30px;
-  font-size: 1.1em;
+  padding-bottom: 10px;
+  transition: all 0.4s ease;
+  border-bottom: 1px dotted rgba(0,0,0,0);
 }
 
 .header .header-menu-home{
@@ -145,12 +165,11 @@ body p,h1,h2,span,a{
 }
 
 .header .header-menu-home a:hover{
-  color: #6C8CFF;
-  opacity: 1;
+  border-bottom: 1px dotted #222222;
 }
 
 .header .header-menu-home .active{
-color: #6C8CFF;
+color: #FFAB00;
 }
 
 /* ---------------------- */
@@ -160,7 +179,7 @@ color: #6C8CFF;
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    line-height: 110px;
+    line-height: 80px;
     height: 110px;
     background-color: rgba(0,0,0,0);
     position: fixed;
@@ -189,7 +208,7 @@ color: #6C8CFF;
   color : white !important;
 }
 .scrolled a:hover{
-  color : #6C8CFF !important;
+  color : #FFAB00 !important;
 }
 
 
@@ -204,7 +223,7 @@ color: #6C8CFF;
 }
 
 hr.divider{
-  background-color :#6C8CFF;
+  background-color :#FFAB00;
   height: 5px;
   width: 100px;
 }
@@ -229,12 +248,12 @@ hr.divider{
 }
 
 .header .header-menu a:hover{
-    color: #6C8CFF;
+    color: #FFAB00;
     opacity: 1;
 }
 
 .header .header-menu .active{
-  color: #6C8CFF;
+  color: #FFAB00;
 }
 
 /* ---- particles.js container ---- */
@@ -249,8 +268,6 @@ hr.divider{
 }
 
 
-
-
 /* --------------------- */
 /* About-Home */
 /* ----------------------- */
@@ -261,14 +278,16 @@ hr.divider{
 
 .banner{
     height: 100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner .banner-content{
     color: white;
     position: absolute;
-    top: 41%;
     text-align: center;
-    width: 100%;
     line-height: 50px;
 } 
 
@@ -279,10 +298,11 @@ hr.divider{
     opacity: 0.9;
     
 } 
+/* #FFAB00 */
 
 .banner .btn{
 
-    border: solid 2px #6C8CFF;
+    border: solid 1px white;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
@@ -294,8 +314,8 @@ hr.divider{
 }
 
 .banner .btn:hover{
-  background-color: #6C8CFF;
-  border: none;
+  background-color: #FFAB00;
+  border-color: #FFAB00;
   color: white;
 }
 
@@ -319,9 +339,9 @@ hr.divider{
 }
  
 #about-ancre{
-  background-color: #e6e6e6; ;
-    height: 500px;height: 630px
-  ;
+  background-color: #f9f9f9 ;
+    height: 500px;
+    height: 640px;
 }
 
 .about-content{
@@ -332,9 +352,9 @@ hr.divider{
 
 .about-content .title-about{
   text-align: center;
-  margin-top: 60px;
+  margin-top: 50px;
   margin-bottom: 50px;
-  border-bottom: solid #6C8CFF;
+  border-bottom: solid #FFAB00;
   width: 30%;
   color: #222222;
   padding-bottom: 15px;
@@ -351,23 +371,41 @@ hr.divider{
 }
 
 
+.about-content  .container-about .text-content {
+  /* text-align: center; */
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  /* margin-left: 250px; */
+}
+
 .about-content  .container-about .text {
   /* text-align: center; */
-  margin-left: 250px;
+  
+  /* margin-left: 250px; */
   font-size: 1.1em;
+  width: 80%;
 }
 
 .about-content  .container-about .plus {
   margin-top: 30px;
+  display:flex;
+  align-items: center;
+  align-items: flex-end;
+  width: 80%;
 }
 
 .about-content  .container-about .cv {
-  border: solid #6C8CFF;
-  color:color;
+  padding: 7px 25px 7px 25px;
+  border:2px solid rgb(210,210,210);
+  text-align: center;
+  display: block;
 }
 
 .about-content  .container-about .cv:hover{
-  background-color: #6C8CFF;
+  border-color: #FFAB00;
+  background-color: #FFAB00;
   color:white;
 }
 
@@ -377,17 +415,19 @@ hr.divider{
   display: flex;
   margin-top: 30px;
   height: 350px;
+  max-width: 100%;
 }
 
 .about-content .about .container-picture {
   display: flex;
-  
-  margin-top: 20px;
+  justify-content: center;
+  width: 100%;
+
 }
 
 .about-content .about .container-picture .picture img{
   border-radius : 100px;
-  margin-left: 400px;
+
 }
 
 
@@ -417,7 +457,7 @@ hr.divider{
   text-align: center;
   color: #222222;
   margin-bottom: 50px;
-  border-bottom: solid #6C8CFF;
+  border-bottom: solid #FFAB00;
   width: 45%;
   padding-bottom: 15px;
 }
@@ -434,7 +474,7 @@ hr.divider{
   width: 6px;
   margin: 0 auto;
   padding-top: 50px;
-  background: #6C8CFF;
+  background: rgb(210,210,210);
 }
 
 .timeline ul li::after {
@@ -490,6 +530,7 @@ time {
   display: block;
   font-size: 1.2rem;
   font-weight: bold;
+  color: #FFAB00;
 }
 
 
@@ -497,11 +538,13 @@ time {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline ul li::after {
-  transition: background .5s ease-in-out;
+  /* transition: background .5s ease-in-out; */
 }
 
 .timeline ul li.in-view::after {
-  background: #222222;
+  background: white !important;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+  transition: inherit ;
 }
 
 .timeline ul li div {
@@ -564,7 +607,7 @@ time {
   text-align: center;
   padding-top: 40px;
   margin-bottom: 50px;
-  border-bottom: solid #6C8CFF;
+  border-bottom: solid #FFAB00;
   width: 30%;
   color: #222222;
   padding-bottom: 15px;
@@ -672,8 +715,8 @@ background-image: url(../img/php.webp);
 /* Projects */
 /* ----------------------- */
 #projects-ancre{
-  background-color:#e6e6e6; 
-  height: 650px;
+  background-color:#f9f9f9; 
+  height: 680px;
 }
 .display-projects.in-view{
   transform: none;
@@ -703,7 +746,7 @@ background-image: url(../img/php.webp);
   text-align: center;
   margin-top: 60px;
   margin-bottom: 50px;
-  border-bottom: solid #6C8CFF;
+  border-bottom: solid #FFAB00;
   width: 30%;
   color: #222222;
   padding-bottom: 15px;
@@ -722,20 +765,21 @@ background-image: url(../img/php.webp);
 }
 
 .projects-content .projects-container .list-projects #group .btn{
-    border: solid 2px #6C8CFF;
+    border: solid 2px rgb(210,210,210);
     color: black;
     font-family: 'Montserrat', sans-serif;
 
 }
 
 .projects-content .projects-container .list-projects #group .btn.active{
-  background-color: #6C8CFF;
+  background-color: #FFAB00;
+  border-color: #FFAB00;
   color:white;
 
 }
 
 .projects-content .projects-container .list-projects #group .btn:hover{
-  background-color: #6C8CFF;
+  background-color: #FFAB00;
   color:white;
 }
 
@@ -787,8 +831,7 @@ background-image: url(../img/php.webp);
 .filterDiv .overlay {
   position: absolute;
   bottom: 0;
-  background: rgb(0, 0, 0);
-  background: rgba(40, 40, 40, 0.9); /* Black see-through */
+  background: rgba(133, 133, 133, 0.9); /* Black see-through */
  height: 100%;
   width: 100%;
   transition: 1s ease-out;
@@ -796,12 +839,16 @@ background-image: url(../img/php.webp);
   color: white;
   font-size: 25px;
   text-align: center;
-  padding-top: 25px;
+  
 }
 
 /* When you mouse over the container, fade in the overlay title */
 .filterDiv:hover .overlay {
   opacity: 1;
+}
+
+.filterDiv .overlay h1{
+  padding-top: 25px;
 }
 
 
@@ -816,7 +863,7 @@ background-image: url(../img/php.webp);
   text-align: center;
   padding-top: 60px;
   margin-bottom: 50px;
-  border-bottom: solid #6C8CFF;
+  border-bottom: solid #FFAB00;
   width: 30%;
   color: #222222;
   padding-bottom: 15px;
@@ -891,7 +938,7 @@ background-image: url(../img/php.webp);
 }
 
 .footer #name{
-  color: #6C8CFF;
+  color: #FFAB00;
   text-decoration: none;
 }
 
