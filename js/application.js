@@ -75,6 +75,17 @@ function showPage() {
       }
     }
 
+    var title = document.querySelectorAll(".display-title");
+
+  
+    function callbackFuncTitle() {
+      for (var i = 0; i < title.length; i++) {
+        if (isElementInViewport(title[i])) {
+          title[i].classList.add("in-view");
+        }
+      }
+    }
+
    
     // 
 
@@ -107,7 +118,10 @@ function showPage() {
     window.addEventListener("resize", callbackFuncButtons);
     window.addEventListener("scroll", callbackFuncButtons);
 
-  
+    window.addEventListener("load", callbackFuncTitle);
+    window.addEventListener("resize", callbackFuncTitle);
+    window.addEventListener("scroll", callbackFuncTitle);
+
   })();
   
 // ------------
