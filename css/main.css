@@ -608,118 +608,6 @@ time {
   }
 }
 
-/* ------------- */
-/* Skills */
-/* ------------- */
-
-/* .skills-ancre .skills-content .title-skills{
-  text-align: center;
-  padding-top: 40px;
-  margin-bottom: 50px;
-  border-bottom: solid #FFAB00;
-  width: 30%;
-  color: #222222;
-  padding-bottom: 15px;
-}
-
-
-.skills-ancre .skills-content{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  height: 650px;
-}
-
-.skills-ancre .skills-content .skills{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin-top: 50px;
-  
-}
-
-.skills-ancre .skills-content .skills-container .languages{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  height: 100%;
-}
-
-.languages .sticker {
-  position: relative;
-  width: 100px;
-  height: 100px;
-}
-
-.languages .sticker:not(:first-child) {
-  margin-left: 100px;
-}
-
-.skills-ancre .plus-content {
-  display: flex;
-  align-items: center;
-}
-
-.skills-ancre .others-content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-top: 40px;
-}
-
-.skills-ancre .others-content h2{
-  text-align: center;
-}
-
-.skills-ancre .others-content h2{
-  text-align: center;
-}
-
-.skills-ancre .others-content .outils{
-  padding-top: 40px;
-}
-
-.languages .example-5 .example-6 .example-7 .example-8 {
-  padding-top: 100px;
-}
-
-.languages .example-5 .sticker-img {
-  background-image: url(../img/angular.png);
-}
-
-.languages .example-6  .sticker-img {
-  background-image: url(../img/html.png);
-}
-
-.languages .example-7  .sticker-img {
-  background-image: url(../img/css.png);
-}
-
-.languages .example-8  .sticker-img {
-  background-image: url(../img/js.jpg);
-}
-
-.languages .example-9 .sticker-img {
-  background-image: url(../img/symfony.png);
-  }
-
-.languages .example-10  .sticker-img {
-background-image: url(../img/php.webp);
-}
-
-
-  .languages .example-11 .sticker-img {
-    background-image: url(../img/sql.jpg);
-    }
-
-    .languages .example-12 .sticker-img {
-      background-image: url(../img/recat.png);
-      } */
-
-
 /* ----------------------- */
 /* Projects */
 /* ----------------------- */
@@ -890,47 +778,17 @@ background-image: url(../img/php.webp);
 }
 
 .hobbies-content .hobbies-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+ 
 }
 
 .hobbies-content .hobbies-container .hobbies{
   display: flex;
-  width: 60%;
-  margin-top: 50px;
 }
 
 
-/* --------------------------------------- */
-/* Stickers.js -> */
-/* -------------------------------------- */
 
-.sticker {
-  position: relative;
-  width: 180px;
-  height: 180px;
-}
 
-.example-2, .example-3, .example-4 {
-  margin-left: 11%;
-} 
 
-.example-1 .sticker-img {
-  background-image: url(../img/dev.png);
-}
-
-.example-2 .sticker-img {
-  background-image: url(../img/muscu.png);
-}
-
-.example-3 .sticker-img {
-  background-image: url(../img/musique.png);
-}
-
-.example-4 .sticker-img {
-  background-image: url(../img/car.png);
-}
 
 /* ------------ */
 /* Footer */
