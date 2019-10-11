@@ -161,7 +161,7 @@ body p,h1,h2,span,a{
   font-family: 'Montserrat', sans-serif;
   margin-right: 30px;
   padding-bottom: 10px;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
   border-bottom: 1px dotted rgba(0,0,0,0);
 }
 
@@ -218,9 +218,11 @@ color: #FFAB00;
 
 .scrolled a{
   color : white !important;
+  transition : none ;
 }
 .scrolled a:hover{
   color : #FFAB00 !important;
+  border-bottom: none !important;
 }
 
 
@@ -552,7 +554,7 @@ time {
 
 .timeline ul li.in-view::after {
   background: white !important;
-  box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
   transition: inherit ;
 }
 
@@ -721,6 +723,7 @@ time {
 
 .filterDiv .image {
   display: block;
+  filter:  grayscale(60%);
   /* transition: .5s ease;
   backface-visibility: hidden; */
 }
@@ -752,6 +755,114 @@ time {
   font-size: 0.8em;
 }
 
+/* ----------------------- */
+/* Modale projects */
+/* ----------------------- */
+.modale:before {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.opened:before {
+  display: block;
+}
+
+/* .projects .modale {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.projects .modale.opened {
+  display: block !important;
+  position:fixed;
+  top:0;
+  left:0;
+  opacity: 1;
+  height:100%;
+  width: 100%;
+  
+  
+  z-index: 999;
+} */
+.btn-close {
+  color: #aaaaaa;
+  font-size: 20px;
+  text-decoration: none;
+  padding:10px;
+  position: absolute;
+  right: 7px;
+  top: 0;
+}
+.btn-close:hover {
+  color: #FFAB00 !important;
+}
+.projects .modale .modale-container{
+  background: #fefefe;
+  border: #333333 solid 0px;
+  border-radius: 5px;
+  margin-left: -400px;
+  text-align:center;
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  z-index: 11;
+  width: 860px;
+  height: 500px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.3);
+  -webkit-transform: translate(0, -500%);
+  -ms-transform: translate(0, -500%);
+  transform: translate(0, -500%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+
+  /* color: black;
+  line-height: 5px;
+  height:70%;
+  width: 70%;
+  color: black;
+  line-height: 10px;
+  background-color:white;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.projects .modale.opened .modale-container{
+
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  top: 20%;
+
+  /* color: black;
+  line-height: 5px;
+  height:70%;
+  width: 70%;
+  color: black;
+  line-height: 10px;
+  background-color:white;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
 
 
 /* ----------------------- */
@@ -775,15 +886,21 @@ time {
   flex-direction: column;
   align-items: center;
   height: 550px;
+  
 }
-
-.hobbies-content .hobbies-container {
- 
+.hobbies-content .hobbies-container{
+  width: 60%;
+  padding-top: 50px;
 }
-
 .hobbies-content .hobbies-container .hobbies{
   display: flex;
+  width: 100%;
+  justify-content: center;
+  justify-content: space-between;
 }
+
+
+
 
 
 
@@ -804,7 +921,7 @@ time {
 }
 
 .footer .rights{
-  padding-top: 40px;
+  padding-top: 35px;
 }
 
 .footer #name{
@@ -820,3 +937,7 @@ time {
   opacity: 0.6;
   color: #BDBDBD;
 }
+
+
+
+

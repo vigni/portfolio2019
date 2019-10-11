@@ -194,6 +194,22 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
+function openmodale() {
+    $('.modale').addClass('opened');
+  
+}
 
+function closemodale() {
+  $('.modale').removeClass('opened');
+
+}
+
+// $('.openmodale').click(function (e) {
+//   alert('dqsdsqdqsd');
+// });
+$('.closemodale').click(function (e) {
+  e.preventDefault();
+  $('.modale').removeClass('opened');
+});
 
 
