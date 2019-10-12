@@ -218,7 +218,8 @@ color: #FFAB00;
 
 .scrolled a{
   color : white !important;
-  transition : none ;
+  transition : none !important;
+  border-bottom: none !important;
 }
 .scrolled a:hover{
   color : #FFAB00 !important;
@@ -312,7 +313,6 @@ hr.divider{
     opacity: 0.9;
     
 } 
-/* #FFAB00 */
 
 .banner .btn{
 
@@ -758,7 +758,7 @@ time {
 /* ----------------------- */
 /* Modale projects */
 /* ----------------------- */
-.modale:before {
+.modale-about:before {
   content: "";
   display: none;
   background: rgba(0, 0, 0, 0.6);
@@ -773,29 +773,6 @@ time {
   display: block;
 }
 
-/* .projects .modale {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.6);
-  display: none;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
-}
-
-.projects .modale.opened {
-  display: block !important;
-  position:fixed;
-  top:0;
-  left:0;
-  opacity: 1;
-  height:100%;
-  width: 100%;
-  
-  
-  z-index: 999;
-} */
 .btn-close {
   color: #aaaaaa;
   font-size: 20px;
@@ -808,18 +785,18 @@ time {
 .btn-close:hover {
   color: #FFAB00 !important;
 }
-.projects .modale .modale-container{
+.projects .modale-about .modale-container{
   background: #fefefe;
   border: #333333 solid 0px;
   border-radius: 5px;
-  margin-left: -400px;
+  margin-left: -700px;
   text-align:center;
   position: fixed;
   left: 50%;
   top: -100%;
   z-index: 11;
-  width: 860px;
-  height: 500px;
+  width: 1460px;
+  height: 800px;
   box-shadow:0 5px 10px rgba(0,0,0,0.3);
   -webkit-transform: translate(0, -500%);
   -ms-transform: translate(0, -500%);
@@ -829,40 +806,33 @@ time {
   -o-transition: -o-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
 
-  /* color: black;
-  line-height: 5px;
-  height:70%;
-  width: 70%;
-  color: black;
-  line-height: 10px;
-  background-color:white;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 }
 
-.projects .modale.opened .modale-container{
+.projects .modale-about.opened .modale-container{
 
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
-  top: 20%;
-
-  /* color: black;
-  line-height: 5px;
-  height:70%;
-  width: 70%;
-  color: black;
-  line-height: 10px;
-  background-color:white;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
+  top: 10%;
 }
+
+.projects .modale-about.opened .modale-container h3{
+  
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #FFAB00;
+}
+
+.projects .modale-about.opened .modale-container .text{
+  display:flex;
+  justify-content: center;
+}
+
+.projects .modale-about.opened .modale-container .text .text-content{
+
+ width: 80%;
+}
+
 
 
 /* ----------------------- */

@@ -195,12 +195,12 @@ for (var i = 0; i < btns.length; i++) {
 }
 
 function openmodale() {
-    $('.modale').addClass('opened');
+    $('.modale-about').addClass('opened');
   
 }
 
 function closemodale() {
-  $('.modale').removeClass('opened');
+  $('.modale-about').removeClass('opened');
 
 }
 
