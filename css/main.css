@@ -758,7 +758,7 @@ time {
 /* ----------------------- */
 /* Modale projects */
 /* ----------------------- */
-.modale-about:before {
+.modale-symfony:before {
   content: "";
   display: none;
   background: rgba(0, 0, 0, 0.6);
@@ -785,7 +785,7 @@ time {
 .btn-close:hover {
   color: #FFAB00 !important;
 }
-.projects .modale-about .modale-container{
+.projects .modale-symfony .modale-container{
   background: #fefefe;
   border: #333333 solid 0px;
   border-radius: 5px;
@@ -808,7 +808,7 @@ time {
 
 }
 
-.projects .modale-about.opened .modale-container{
+.projects .modale-symfony.opened .modale-container{
 
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
@@ -816,19 +816,19 @@ time {
   top: 10%;
 }
 
-.projects .modale-about.opened .modale-container h3{
+.projects .modale-symfony.opened .modale-container h3{
   
   padding-top: 30px;
   padding-bottom: 30px;
   color: #FFAB00;
 }
 
-.projects .modale-about.opened .modale-container .text{
+.projects .modale-symfony.opened .modale-container .text{
   display:flex;
   justify-content: center;
 }
 
-.projects .modale-about.opened .modale-container .text .text-content{
+.projects .modale-symfony.opened .modale-container .text .text-content{
 
  width: 80%;
 }

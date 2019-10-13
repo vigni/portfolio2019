@@ -195,12 +195,12 @@ for (var i = 0; i < btns.length; i++) {
 }
 
 function openmodale() {
-    $('.modale-about').addClass('opened');
+    $('.modale-symfony').addClass('opened');
   
 }
 
 function closemodale() {
-  $('.modale-about').removeClass('opened');
+  $('.modale-symfony').removeClass('opened');
 
 }
 
