@@ -194,13 +194,43 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-function openmodale() {
+function openmodaleSymfony() {
     $('.modale-symfony').addClass('opened');
   
 }
 
-function closemodale() {
+function closemodaleSymfony() {
   $('.modale-symfony').removeClass('opened');
+
+}
+
+function openmodaleAngular() {
+  $('.modale-angular').addClass('opened');
+
+}
+
+function closemodaleAngular() {
+$('.modale-angular').removeClass('opened');
+
+}
+
+function openmodalePortfolio() {
+  $('.modale-portfolio').addClass('opened');
+
+}
+
+function closemodalePortfolio() {
+$('.modale-portfolio').removeClass('opened');
+
+}
+
+function openmodaleTma() {
+  $('.modale-tma').addClass('opened');
+
+}
+
+function closemodaleTma() {
+$('.modale-tma').removeClass('opened');
 
 }
 

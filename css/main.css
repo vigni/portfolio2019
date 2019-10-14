@@ -656,12 +656,13 @@ time {
   display:flex;
   flex-direction: column;
   align-items: center;
-  height: 660px;
+  height: 1060px;
 }
 
 .projects-content .projects-container {
   width: 100%;
 }
+
 
 .projects-content .projects-container .list-projects #group .btn{
     border: solid 2px rgb(210,210,210);
@@ -679,6 +680,7 @@ time {
 
 .projects-content .projects-container .list-projects #group .btn:hover{
   background-color: #FFAB00;
+  border-color: #FFAB00;
   color:white;
 }
 
@@ -699,13 +701,13 @@ time {
   display: flex;
   justify-content: center;
   margin-top: 80px;
-  width: 70%;
+  width: 60%;
 }
 
 .projects {
   display: flex;
   justify-content: center;
-
+  width: 100%;
 }
 
 .filterDiv {
@@ -731,7 +733,7 @@ time {
 .filterDiv .overlay {
   position: absolute;
   bottom: 0;
-  background: rgba(133, 133, 133, 0.9); /* Black see-through */
+  background: rgba(14, 14, 14, 0.8); /* Black see-through */
  height: 100%;
   width: 100%;
   transition: 1s ease-out;
@@ -758,7 +760,7 @@ time {
 /* ----------------------- */
 /* Modale projects */
 /* ----------------------- */
-.modale-symfony:before {
+.modale:before {
   content: "";
   display: none;
   background: rgba(0, 0, 0, 0.6);
@@ -785,7 +787,7 @@ time {
 .btn-close:hover {
   color: #FFAB00 !important;
 }
-.projects .modale-symfony .modale-container{
+.projects .modale .modale-container{
   background: #fefefe;
   border: #333333 solid 0px;
   border-radius: 5px;
@@ -796,7 +798,7 @@ time {
   top: -100%;
   z-index: 11;
   width: 1460px;
-  height: 800px;
+  height: auto;
   box-shadow:0 5px 10px rgba(0,0,0,0.3);
   -webkit-transform: translate(0, -500%);
   -ms-transform: translate(0, -500%);
@@ -808,7 +810,7 @@ time {
 
 }
 
-.projects .modale-symfony.opened .modale-container{
+.projects .modale.opened .modale-container{
 
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
@@ -816,19 +818,19 @@ time {
   top: 10%;
 }
 
-.projects .modale-symfony.opened .modale-container h3{
+.projects .modale.opened .modale-container h3{
   
   padding-top: 30px;
   padding-bottom: 30px;
   color: #FFAB00;
 }
 
-.projects .modale-symfony.opened .modale-container .text{
+.projects .modale.opened .modale-container .text{
   display:flex;
   justify-content: center;
 }
 
-.projects .modale-symfony.opened .modale-container .text .text-content{
+.projects .modale.opened .modale-container .text .text-content{
 
  width: 80%;
 }
