@@ -730,6 +730,8 @@ time {
   backface-visibility: hidden; */
 }
 
+
+
 .filterDiv .overlay {
   position: absolute;
   bottom: 0;
@@ -867,10 +869,40 @@ time {
 .hobbies-content .hobbies-container .hobbies{
   display: flex;
   width: 100%;
+  height: 100%;
   justify-content: center;
   justify-content: space-between;
 }
 
+.hobbies-content .hobbies-container .hobbies-content{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.hobbies-content .hobbies-container .hobbies .hobbies-content .image {
+  
+  border-radius: 50%;
+  background-color: #222222;
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  padding: 15%;
+}
+
+.hobbies-content .hobbies-container .hobbies .hobbies-content .image .icone{
+  color: white;
+
+}
+
+.hobbies-content .hobbies-container .hobbies .hobbies-content span{
+  padding-top: 30px;
+  color: #222222;
+  padding-left: 10px;
+}
 
 
 
@@ -905,10 +937,11 @@ time {
   color:white;
 }
 
-.footer .citation{
-  opacity: 0.6;
-  color: #BDBDBD;
+.footer img{
+  height: 40px;
+  width: 40px;
 }
+
 
 
 
