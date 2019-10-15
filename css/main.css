@@ -701,7 +701,8 @@ time {
   display: flex;
   justify-content: center;
   margin-top: 80px;
-  width: 60%;
+  width: 70%;
+  flex-wrap: wrap;
 }
 
 .projects {
@@ -711,10 +712,20 @@ time {
 }
 
 .filterDiv {
-  margin-left: 50px;
   display: none; /* Hidden by default */
   position: relative;
   cursor: pointer;
+  width: 350px;
+height: 150px;
+
+}
+
+.filterDiv .filter-content{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* The "show" class is added to the filtered elements */
@@ -725,12 +736,21 @@ time {
 
 .filterDiv .image {
   display: block;
+  filter:  grayscale(50%);
+  width: 250px;
+  height: 100px;
+  transition: 0.5s ease-out;
+
+}
+
+.filterDiv:hover .image {
+  display: block;
   filter:  grayscale(60%);
+  width: 260px;
+  height: 110px;
   /* transition: .5s ease;
   backface-visibility: hidden; */
 }
-
-
 
 .filterDiv .overlay {
   position: absolute;
@@ -752,8 +772,9 @@ time {
 }
 
 .filterDiv .overlay h3{
-  padding-top: 25px;
-  padding-bottom: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: bold;
 }
 .filterDiv .overlay p{
   font-size: 0.8em;
@@ -777,18 +798,36 @@ time {
   display: block;
 }
 
-.btn-close {
-  color: #aaaaaa;
-  font-size: 20px;
-  text-decoration: none;
-  padding:10px;
-  position: absolute;
-  right: 7px;
-  top: 0;
+.btn-close span {
+  font-size:50px;
+  position: fixed;
 }
-.btn-close:hover {
+
+.btn-close{
+  position:fixed;
+}
+.btn-close span {
+  font-size:50px;
+  /* position: fixed; */
+  color: #444444;
+  width: 50px; 
+  height: 50px;
+   text-decoration: none;
+    padding:10px;
+    /* position: absolute; */
+    right: 7px;
+    top: 0;
+    opacity: 0.8;
+}
+
+.btn-close:hover span {
+  opacity: 1;
   color: #FFAB00 !important;
 }
+
+
+
+
 .projects .modale .modale-container{
   background: #fefefe;
   border: #333333 solid 0px;
@@ -796,6 +835,8 @@ time {
   margin-left: -700px;
   text-align:center;
   position: fixed;
+  overflow-y:auto;
+  overflow-x:hidden;
   left: 50%;
   top: -100%;
   z-index: 11;
@@ -809,15 +850,17 @@ time {
   -moz-transition: -moz-transform 0.3s ease-out;
   -o-transition: -o-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
-
+  
 }
 
 .projects .modale.opened .modale-container{
-
+  overscroll-behavior-y: contain;
+  height: 85%;
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
   top: 10%;
+  
 }
 
 .projects .modale.opened .modale-container h3{
