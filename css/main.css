@@ -1,8 +1,17 @@
 body{
-  margin-top:0px;
-  margin-left: 0px;
+  margin:0px;
+  margin: 0px;
+}
+body a{
+  color: #FFAB00;
+  text-decoration: none;
 }
 
+body a:hover{
+  color: #FFAB00;
+  text-decoration:underline;
+  text-decoration-color: #FFAB00;
+}
 .display-title.in-view{
   /* transform: none; */
   visibility: visible;
@@ -131,8 +140,7 @@ body p,h1,h2,span,a{
 
 /* ---------------------- */
 /* Menu-accueil */
-/* ---------------------- */
-
+/*  */
 .header .header-logo-home{
   float: left;
   margin-left: 40px;
@@ -353,7 +361,7 @@ hr.divider{
 }
  
 #about-ancre{
-  background-color: #f9f9f9 ;
+  background-color: #eaeaea ;
     height: 500px;
     height: 640px;
 }
@@ -366,7 +374,7 @@ hr.divider{
 
 .about-content .title-about{
   text-align: center;
-  margin-top: 50px;
+  margin-top: 60px;
   margin-bottom: 50px;
   border-bottom: solid #FFAB00;
   width: 30%;
@@ -436,7 +444,7 @@ hr.divider{
   display: flex;
   justify-content: center;
   width: 100%;
-padding-left: 150px;
+padding-left: 300px;
 }
 
 .about-content .about .container-picture .picture img{
@@ -456,7 +464,7 @@ padding-left: 150px;
 }
 .timeline{
   background: white;
-  color: #222222;
+  color: #444444;
   font-family: 'Montserrat', sans-serif;
   height: 1800px;
 
@@ -614,7 +622,7 @@ time {
 /* Projects */
 /* ----------------------- */
 #projects-ancre{
-  background-color:#f9f9f9; 
+  background-color:#eaeaea; 
   height: 680px;
 }
 .display-projects.in-view{
@@ -798,36 +806,6 @@ height: 150px;
   display: block;
 }
 
-.btn-close span {
-  font-size:50px;
-  position: fixed;
-}
-
-.btn-close{
-  position:fixed;
-}
-.btn-close span {
-  font-size:50px;
-  /* position: fixed; */
-  color: #444444;
-  width: 50px; 
-  height: 50px;
-   text-decoration: none;
-    padding:10px;
-    /* position: absolute; */
-    right: 7px;
-    top: 0;
-    opacity: 0.8;
-}
-
-.btn-close:hover span {
-  opacity: 1;
-  color: #FFAB00 !important;
-}
-
-
-
-
 .projects .modale .modale-container{
   background: #fefefe;
   border: #333333 solid 0px;
@@ -863,12 +841,99 @@ height: 150px;
   
 }
 
-.projects .modale.opened .modale-container h3{
+.btn-close span {
+  font-size:50px;
+  position: fixed;
+}
+.btn-close span {
+  font-size:50px;
+  /* position: fixed; */
+  color: #444444;
+  width: 50px; 
+  height: 50px;
+   text-decoration: none;
+    padding:10px;
+    /* position: absolute; */
+    right: 7px;
+    top: 0;
+    opacity: 0.8;
+}
+
+.btn-close:hover span {
+  opacity: 1;
+  color: #FFAB00 !important;
+}
+
+.projects .modale.opened .modale-container h2{
   
   padding-top: 30px;
   padding-bottom: 30px;
   color: #FFAB00;
 }
+.projects .modale.opened .modale-container .text .about{
+  display:flex;
+  justify-content: space-between;
+  justify-content: center;
+ }
+
+ .projects .modale.opened .modale-container .text .about .techno{
+  display:flex;
+  align-items: flex-start;
+  flex-direction: column;
+ }
+
+ .projects .modale.opened .modale-container .text .about .date{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+ }
+
+.projects .modale.opened .modale-container .intro{
+  margin-top: 10px;
+
+ }
+
+.projects .modale.opened .modale-container h3{
+ font-size: 1.3em;
+ font-weight: bold;
+}
+
+/* .projects .modale.opened .modale-container .intro h3,
+.projects .modale.opened .modale-container .bilan h3,
+.projects .modale.opened .modale-container .plus h3{
+  font-size: 1.4em;
+  text-decoration: underline;
+ } */
+
+.projects .modale.opened .modale-container .bilan{
+  margin-top: 40px;
+
+ }
+
+ .projects .modale.opened .modale-container .plus{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .projects .modale.opened .modale-container .plus .ressources{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+ } 
+
+ .projects .modale.opened .modale-container .plus .ressources a:not(.code-angular){
+  margin-left : 10px;
+ } 
+
+
+
+ .projects .modale.opened .modale-container .plus .ressources .maquette{
+  margin-left : 6px !important;
+ } 
+
 
 .projects .modale.opened .modale-container .text{
   display:flex;
@@ -876,7 +941,7 @@ height: 150px;
 }
 
 .projects .modale.opened .modale-container .text .text-content{
-
+  padding-bottom: 50px;
  width: 80%;
 }
 
@@ -889,7 +954,7 @@ height: 150px;
 
 .hobbies-content .title-hobbies{
   text-align: center;
-  padding-top: 60px;
+  padding-top: 50px;
   margin-bottom: 50px;
   border-bottom: solid #FFAB00;
   width: 30%;
@@ -902,7 +967,7 @@ height: 150px;
   display:flex;
   flex-direction: column;
   align-items: center;
-  height: 550px;
+  height: 500px;
   
 }
 .hobbies-content .hobbies-container{
@@ -915,6 +980,7 @@ height: 150px;
   height: 100%;
   justify-content: center;
   justify-content: space-between;
+  padding-left: 50px;
 }
 
 .hobbies-content .hobbies-container .hobbies-content{
@@ -934,7 +1000,7 @@ height: 150px;
   justify-content: center;
   align-content: center;
   padding: 15%;
-  box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, .3);
+  box-shadow: 3px 3px 6px 1px rgba(6, 6, 6, .3);
 }
 
 .hobbies-content .hobbies-container .hobbies .hobbies-content .image .icone{
@@ -945,7 +1011,7 @@ height: 150px;
 .hobbies-content .hobbies-container .hobbies .hobbies-content span{
   padding-top: 30px;
   color: #222222;
-  padding-left: 10px;
+
 }
 
 
@@ -974,12 +1040,10 @@ height: 150px;
 
 .footer #name{
   color: #FFAB00;
-  text-decoration: none;
+
 }
 
-.footer #name:hover{
-  color:white;
-}
+
 
 .footer img{
   height: 40px;

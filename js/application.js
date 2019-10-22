@@ -2,10 +2,10 @@
 //Loader
 //---------------
 
-setTimeout(showPage,2000);
+setTimeout(showPage,1000);
 
 function showPage() {
-  $("#loading").fadeOut(2000);
+  $("#loading").fadeOut(1000);
   $("#preloader").fadeOut(1000);
 }
 
@@ -196,50 +196,38 @@ for (var i = 0; i < btns.length; i++) {
 
 function openmodaleSymfony() {
     $('.modale-symfony').addClass('opened');
-  
 }
 
 function closemodaleSymfony() {
   $('.modale-symfony').removeClass('opened');
-
 }
 
 function openmodaleAngular() {
   $('.modale-angular').addClass('opened');
-
 }
 
 function closemodaleAngular() {
 $('.modale-angular').removeClass('opened');
-
 }
 
 function openmodalePortfolio() {
   $('.modale-portfolio').addClass('opened');
-
 }
 
 function closemodalePortfolio() {
 $('.modale-portfolio').removeClass('opened');
-
 }
 
 function openmodaleTma() {
   $('.modale-tma').addClass('opened');
-
 }
 
 function closemodaleTma() {
 $('.modale-tma').removeClass('opened');
-
 }
 
-// $('.openmodale').click(function (e) {
-//   alert('dqsdsqdqsd');
-// });
-$('.closemodale').click(function (e) {
-  e.preventDefault();
-  $('.modale').removeClass('opened');
-});
-
+// 
+$('.carousel').carousel({
+  interval: false
+})
 
