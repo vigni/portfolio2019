@@ -1,6 +1,6 @@
 // --------------
 //Loader
-//---------------
+
 
 setTimeout(showPage,1000);
 
@@ -32,7 +32,8 @@ function showPage() {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
       );
     }
-  
+  //---------------
+
     function callbackFunc() {
       for (var i = 0; i < items.length; i++) {
         if (isElementInViewport(items[i])) {
@@ -57,6 +58,7 @@ function showPage() {
 
   
     function callbackFuncProjects() {
+      
       for (var i = 0; i < projects.length; i++) {
         if (isElementInViewport(projects[i])) {
           projects[i].classList.add("in-view");
@@ -90,16 +92,52 @@ function showPage() {
     // 
 
   
-    // function callbackFuncProjects() {
-    //   for (var i = 0; i < intro.length; i++) {
-    //     if (isElementInViewport(intro[i])) {
-    //       intro[i].classList.add("in-view");
-    //     }
-    //   }
-    // }
+     function rendre_actif(element)
+     {
+       if(document.querySelector(".onAncre"))
+         {
+             document.querySelector(".onAncre").className = "";
+         }
+         if(element!='home-ancre-menu'){
+          document.querySelector('a[href="#' + element + '"]').className = "onAncre";
+         }
+        
+     
+     }
+      
+      
+     function checkAncre(){
+         var scroll = window.scrollY;
+         if(scroll <= document.getElementById("home-ancre-menu").offsetTop)
+         {
+             rendre_actif("home-ancre-menu");
+         }
+         if(scroll >= document.getElementById("home-ancre-menu").offsetTop)
+         {
+             rendre_actif("about-ancre");
+         }
+         if(scroll >= document.getElementById("about-ancre-menu").offsetTop)
+         {
+          
+             rendre_actif("timeline-ancre");
+         }
 
-     //For projects
-    
+         if(scroll >= document.getElementById("about-timeline-menu").offsetTop)
+         {
+             rendre_actif("projects-ancre");
+         }
+
+         if(scroll >= document.getElementById("hobbies-ancre-menu").offsetTop)
+         {
+             rendre_actif("hobbies-ancre");
+         }
+     }
+     
+         
+           // listen for events
+           window.addEventListener("load", checkAncre);
+           window.addEventListener("resize", checkAncre);
+           window.addEventListener("scroll", checkAncre);
   
     // listen for events
     window.addEventListener("load", callbackFunc);
@@ -134,10 +172,10 @@ function showPage() {
 // le scoll n'est pas forcément en haut au chargement.
 function onWindowScroll(event) {
 	if (window.pageYOffset < 46) {
-    header.classList.remove('scrolled')
+    header.classList.remove('scrolled');
     $('#logoImgHeader').attr('src', 'img/logo-black.png');
   } else {
-    header.classList.add('scrolled')
+    header.classList.add('scrolled');
     $('#logoImgHeader').attr('src', 'img/logo-white.png');
   }
 }
@@ -225,9 +263,4 @@ function openmodaleTma() {
 function closemodaleTma() {
 $('.modale-tma').removeClass('opened');
 }
-
-// 
-$('.carousel').carousel({
-  interval: false
-})
 
