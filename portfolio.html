@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
     <!-- CSS -->
 
     <!-- SCSS -->
@@ -23,6 +25,20 @@
 </head>
 
 <body>
+    <!-- erreur message -> bientot dispo sur mobile -->
+    <div class="error">
+        <div class="message">
+            <p></p>
+            <p>Bienvenue cher visiteur, mon créateur est en train de m'adapter sur téléphone.
+            Tu peux cependant venir m'admirer sur ton ordinateur.</p>
+            <p>Merci de ta compréhension et à très vite!</p>
+            <div class="works">
+                <i class="fas fa-wrench fa-5x"></i>
+            </div>
+            
+        </div>
+    </div>
+
     <!-- Loader - Chargement -->
     <div id="loading">
         <div id="preloader">
@@ -670,6 +686,10 @@
                 </div>
             </div>
         </section>
+        <div class="arrow-to-top">
+                <i  onClick="window.scrollTo(x,y);" class="fas fa-arrow-up fa-2x"></i>
+        </div>
+        
         <footer>
             <div class="footer">
                 <p class="rights">© 2019. Tous droits réservés | Designé par <span id="name"> Vigni </span> </p>

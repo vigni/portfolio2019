@@ -77,7 +77,7 @@ function showPage() {
 
     //Title of each section
     var title = document.querySelectorAll(".display-title");
-
+    
   
     function callbackFuncTitle() {
       for (var i = 0; i < title.length; i++) {
@@ -98,6 +98,8 @@ function showPage() {
          if(element!='home-ancre-menu'){
           document.querySelector('a[href="#' + element + '"]').className = "onAncre";
          }
+
+        
         
      
      }
@@ -108,10 +110,12 @@ function showPage() {
          if(scroll <= document.getElementById("home-ancre-menu").offsetTop)
          {
              rendre_actif("home-ancre-menu");
+             document.querySelector(".arrow-to-top").classList.remove("active");
          }
          if(scroll >= document.getElementById("home-ancre-menu").offsetTop)
          {
              rendre_actif("about-anchor");
+             document.querySelector(".arrow-to-top").classList.add("active");
          }
          if(scroll >= document.getElementById("about-ancre-menu").offsetTop)
          {
@@ -129,7 +133,9 @@ function showPage() {
              rendre_actif("hobbies-anchor");
          }
      }
-     
+
+   
+
          
            // listen for events
            window.addEventListener("load", checkAncre);
