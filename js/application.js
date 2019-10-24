@@ -1,6 +1,5 @@
+// Loader
 // --------------
-//Loader
-
 
 setTimeout(showPage,1000);
 
@@ -11,13 +10,12 @@ function showPage() {
 
 
 // --------------
-//Timeline
+//Adding class to the current element in viewport - Purpose to launch effects 
 //---------------
 (function() {
 
     'use strict';
   
-    // define variables
     var items = document.querySelectorAll(".timeline li");
   
     // check if an element is in viewport
@@ -32,7 +30,6 @@ function showPage() {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
       );
     }
-  //---------------
 
     function callbackFunc() {
       for (var i = 0; i < items.length; i++) {
@@ -42,7 +39,7 @@ function showPage() {
       }
     }
 
-    //For intro
+    //Intro
     // define variables
     var introHobbies = document.querySelectorAll(".display-move");
   
@@ -54,9 +51,9 @@ function showPage() {
       }
     }
 
+    //Projects
     var projects = document.querySelectorAll(".display-projects");
 
-  
     function callbackFuncProjects() {
       
       for (var i = 0; i < projects.length; i++) {
@@ -66,6 +63,7 @@ function showPage() {
       }
     }
 
+    //buttonsProjects
     var buttons = document.querySelectorAll(".display-buttons");
 
   
@@ -77,6 +75,7 @@ function showPage() {
       }
     }
 
+    //Title of each section
     var title = document.querySelectorAll(".display-title");
 
   
@@ -89,9 +88,7 @@ function showPage() {
     }
 
    
-    // 
-
-  
+    // give active class at the element which has the id given in param
      function rendre_actif(element)
      {
        if(document.querySelector(".onAncre"))
@@ -105,7 +102,7 @@ function showPage() {
      
      }
       
-      
+      // check if the top of the scren touch an anchor
      function checkAncre(){
          var scroll = window.scrollY;
          if(scroll <= document.getElementById("home-ancre-menu").offsetTop)
@@ -114,22 +111,22 @@ function showPage() {
          }
          if(scroll >= document.getElementById("home-ancre-menu").offsetTop)
          {
-             rendre_actif("about-ancre");
+             rendre_actif("about-anchor");
          }
          if(scroll >= document.getElementById("about-ancre-menu").offsetTop)
          {
           
-             rendre_actif("timeline-ancre");
+             rendre_actif("timeline-anchor");
          }
 
          if(scroll >= document.getElementById("about-timeline-menu").offsetTop)
          {
-             rendre_actif("projects-ancre");
+             rendre_actif("projects-anchor");
          }
 
          if(scroll >= document.getElementById("hobbies-ancre-menu").offsetTop)
          {
-             rendre_actif("hobbies-ancre");
+             rendre_actif("hobbies-anchor");
          }
      }
      
@@ -163,7 +160,7 @@ function showPage() {
   })();
   
 // ------------
-  // MENU
+// MENU effects during the scroll
 // ------------
 
   const header = document.getElementById('isFixed')
@@ -232,6 +229,8 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
+
+//MODALE - ouvre la modale lors du clique sur l'image en question
 function openmodaleSymfony() {
     $('.modale-symfony').addClass('opened');
 }

@@ -12,17 +12,17 @@ body a:hover{
   text-decoration:underline;
   text-decoration-color: #FFAB00;
 }
+
+/* Effet sur les titres des sections */
 .display-title.in-view{
-  /* transform: none; */
   visibility: visible;
   opacity: 1;
 }
 
 .display-title {
   visibility: hidden;
-  /* transform: translate3d(200px, 0, 0); */
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 /* ----------------- */
 /* Loader */
@@ -140,8 +140,18 @@ body p,h1,h2,span,a{
 
 /* ---------------------- */
 /* Menu-accueil */
-/*  */
+/* ---------------------- */
 
+.header{
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  line-height: 80px;
+  height: 110px;
+  background-color: rgba(0,0,0,0);
+  position: fixed;
+  z-index: 999;
+}
 .onAncre {
   color : #FFAB00 !important;
 }
@@ -157,15 +167,12 @@ body p,h1,h2,span,a{
   display:flex;
   margin:0;
   padding: 0;
-  /* max-width: 600px; */
-  /* justify-content: space-between; */
 }
 
 .header .header-menu-home li{
   list-style-type: none;
 
 }
-
 
 .header .header-menu-home a{
   color: #222222;
@@ -189,7 +196,7 @@ body p,h1,h2,span,a{
 }
 
 .header .header-menu-home a:hover{
-  border-bottom: 2px dotted #FFAB00;
+  border-bottom: 3px dotted #FFAB00;
 }
 
 .header .header-menu-home .active{
@@ -197,18 +204,9 @@ color: #FFAB00;
 }
 
 /* ---------------------- */
-/* Menu */
+/* Menu une fois scroller */
 /* ---------------------- */
-.header{
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    line-height: 80px;
-    height: 110px;
-    background-color: rgba(0,0,0,0);
-    position: fixed;
-    z-index: 999;
-}
+
 
 .scrolled {
   background-color: #222222;
@@ -216,7 +214,6 @@ color: #FFAB00;
   height: 65px;
   color:white;
   animation: fadeInMenu 1.4s;
-  /*animation-fill-mode: both*/
 }
 
 .scrolled .onAncre{
@@ -253,11 +250,7 @@ color: #FFAB00;
   height:"100";
 }
 
-hr.divider{
-  background-color :#FFAB00;
-  height: 5px;
-  width: 100px;
-}
+
 
 .header .header-menu{
     font-family: 'Montserrat', sans-serif;
@@ -300,10 +293,16 @@ hr.divider{
 
 
 /* --------------------- */
-/* About-Home */
+/* Banner */
 /* ----------------------- */
+hr.divider{
+  background-color :#FFAB00;
+  height: 5px;
+  width: 100px;
+}
 
-.home-ancre{
+
+.home-anchor{
   height: 100vh;
 }
 
@@ -368,7 +367,7 @@ hr.divider{
   transition: all .5s ease-in-out;
 }
  
-#about-ancre{
+#about-anchor{
   background-color: #eaeaea ;
     height: 500px;
     height: 640px;
@@ -402,18 +401,13 @@ hr.divider{
 
 
 .about-content  .container-about .text-content {
-  /* text-align: center; */
   display:flex;
   flex-direction: column;
   align-items: flex-end;
   width: 100%;
-  /* margin-left: 250px; */
 }
 
 .about-content  .container-about .text {
-  /* text-align: center; */
-  
-  /* margin-left: 250px; */
   font-size: 1.1em;
   width: 80%;
 }
@@ -460,10 +454,8 @@ padding-left: 300px;
 
 }
 
-
-
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––  */
-/* TIMELINE
+/* Timeline
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline p{
@@ -629,7 +621,7 @@ time {
 /* ----------------------- */
 /* Projects */
 /* ----------------------- */
-#projects-ancre{
+#projects-anchor{
   background-color:#eaeaea; 
   height: 680px;
 }
@@ -755,8 +747,8 @@ height: 150px;
   filter:  grayscale(50%);
   width: 250px;
   height: 100px;
-  transition: 0.5s ease-out;
-
+  transition: 0.4s ease-out;
+  box-shadow: 6px 6px rgba(0,0,0,0.3);
 }
 
 .filterDiv:hover .image {
@@ -764,8 +756,8 @@ height: 150px;
   filter:  grayscale(60%);
   width: 260px;
   height: 110px;
-  /* transition: .5s ease;
-  backface-visibility: hidden; */
+  box-shadow: 7px 7px rgba(0,0,0,0);
+  
 }
 
 .filterDiv .overlay {
@@ -780,6 +772,7 @@ height: 150px;
   font-size: 25px;
   text-align: center;
   line-height: 5px;
+  border-radius: 5px;
 }
 
 /* When you mouse over the container, fade in the overlay title */
@@ -855,13 +848,11 @@ height: 150px;
 }
 .btn-close span {
   font-size:50px;
-  /* position: fixed; */
   color: #444444;
   width: 50px; 
   height: 50px;
    text-decoration: none;
     padding:10px;
-    /* position: absolute; */
     right: 7px;
     top: 0;
     opacity: 0.8;
@@ -906,16 +897,8 @@ height: 150px;
  font-weight: bold;
 }
 
-/* .projects .modale.opened .modale-container .intro h3,
-.projects .modale.opened .modale-container .bilan h3,
-.projects .modale.opened .modale-container .plus h3{
-  font-size: 1.4em;
-  text-decoration: underline;
- } */
-
 .projects .modale.opened .modale-container .bilan{
   margin-top: 40px;
-
  }
 
  .projects .modale.opened .modale-container .plus{
@@ -937,7 +920,6 @@ height: 150px;
  } 
 
 
-
  .projects .modale.opened .modale-container .plus .ressources .maquette{
   margin-left : 6px !important;
  } 
@@ -952,7 +934,6 @@ height: 150px;
   padding-bottom: 50px;
  width: 80%;
 }
-
 
 
 .slides {
@@ -977,7 +958,7 @@ height: 150px;
 
 .slide-container { display: block; }
 
-.slide {
+.slideSmartleads {
   top: 0;
   opacity: 0;
   width: 100%;
@@ -990,7 +971,7 @@ height: 150px;
   transition: all .7s ease-in-out;
 }
 
-.slide img {
+.slideSmartleads img {
   width: 100%;
   height: 100%;
   box-shadow: 3px 3px #222, -3px 0 -3px #222;
@@ -1005,14 +986,14 @@ height: 150px;
   z-index: 9;
   cursor: pointer;
   transition: opacity .2s;
-  font-size: 100px;
+  font-size: 50px;
   text-align: center;
   line-height: 380px;
   font-family: "Varela Round", sans-serif;
   text-shadow: 0px 0px 15px rgb(119, 119, 119);
 }
 
-.slide:hover + .nav label { 
+.slideSmartleads:hover + .nav label { 
   opacity: 0.5; 
   
 }
@@ -1025,7 +1006,7 @@ height: 150px;
   right: 0; 
 }
 
-input:checked + .slide-container  .slide {
+input:checked + .slide-container  .slideSmartleads {
   opacity: 1;
   transform: scale(1);
   transition: opacity 1s ease-in-out;
@@ -1034,7 +1015,7 @@ input:checked + .slide-container  .slide {
 
 input:checked + .slide-container .nav label { 
   display: block;
-  padding-top: 60px;
+  padding-top: 90px;
   color: #222222;
 }
 
@@ -1071,6 +1052,12 @@ input#img-5:checked ~ .nav-dots label#img-dot-5,
 input#img-6:checked ~ .nav-dots label#img-dot-6 {
 background: rgba(0, 0, 0, 0.8);
 }
+
+.carousel{
+  box-shadow: 3px 3px 6px 1px rgba(6, 6, 6, .3), -3px -3px 6px 1px rgba(6, 6, 6, .3);
+
+}
+
 /* ----------------------- */
 /* Hobbies */
 /* ----------------------- */
@@ -1137,13 +1124,6 @@ background: rgba(0, 0, 0, 0.8);
   color: #222222;
 
 }
-
-
-
-
-
-
-
 
 /* ------------ */
 /* Footer */
