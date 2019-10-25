@@ -1,7 +1,7 @@
 new TypeIt('#subtitle', {
     speed: 50
   })
-  .pause(2000)
+  .pause(3000)
   .type('Bienvenue sur mon portfolio')
   .pause(1300)
   .options({speed: 200})

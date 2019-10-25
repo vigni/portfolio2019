@@ -1,11 +1,11 @@
 // Loader
 // --------------
 
-setTimeout(showPage,1000);
+setTimeout(showPage,1700);
 
 function showPage() {
-  $("#loading").fadeOut(1000);
-  $("#preloader").fadeOut(1000);
+  $("#loading").fadeOut(1500);
+  $("#loader").fadeOut(1000);
 }
 
 
@@ -87,6 +87,18 @@ function showPage() {
       }
     }
 
+    //Title of each section
+    var icones = document.querySelectorAll(".footer-icones");
+    
+  
+    function callbackFuncIcones() {
+      for (var i = 0; i < icones.length; i++) {
+        if (isElementInViewport(icones[i])) {
+          icones[i].classList.add("in-view");
+        }
+      }
+    }
+
    
     // give active class at the element which has the id given in param
      function rendre_actif(element)
@@ -136,11 +148,15 @@ function showPage() {
 
    
 
-         
-           // listen for events
-           window.addEventListener("load", checkAncre);
-           window.addEventListener("resize", checkAncre);
-           window.addEventListener("scroll", checkAncre);
+    // listen for events
+    window.addEventListener("load", callbackFuncIcones);
+    window.addEventListener("resize", callbackFuncIcones);
+    window.addEventListener("scroll", callbackFuncIcones);
+
+    // listen for events
+    window.addEventListener("load", checkAncre);
+    window.addEventListener("resize", checkAncre);
+    window.addEventListener("scroll", checkAncre);
   
     // listen for events
     window.addEventListener("load", callbackFunc);
