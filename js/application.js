@@ -1,6 +1,7 @@
 // Loader
 // --------------
 
+
 setTimeout(showPage,1700);
 
 function showPage() {
@@ -38,6 +39,7 @@ function showPage() {
         }
       }
     }
+    
 
     //Intro
     // define variables
@@ -124,14 +126,13 @@ function showPage() {
              rendre_actif("home-ancre-menu");
              document.querySelector(".arrow-to-top").classList.remove("active");
          }
-         if(scroll >= document.getElementById("home-ancre-menu").offsetTop)
+         if(scroll >= document.getElementById("home-ancre-menu").offsetTop )
          {
              rendre_actif("about-anchor");
              document.querySelector(".arrow-to-top").classList.add("active");
          }
          if(scroll >= document.getElementById("about-ancre-menu").offsetTop)
          {
-          
              rendre_actif("timeline-anchor");
          }
 
@@ -285,3 +286,10 @@ function closemodaleTma() {
 $('.modale-tma').removeClass('opened');
 }
 
+$(document).on('click', 'a[href^="#"]', function (event) {
+  event.preventDefault();
+
+$('html, body').animate({
+  scrollTop: $($.attr(this, 'href')).offset().top
+}, 500);
+});

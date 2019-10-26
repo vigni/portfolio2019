@@ -29,9 +29,9 @@
     <div class="error">
         <div class="message">
             <p></p>
-            <p>Bienvenue cher visiteur, mon créateur est en train de m'adapter sur téléphone.
-            Tu peux cependant venir m'admirer sur ton ordinateur ou ta tablette.</p>
-            <p>Merci de ta compréhension et à très vite!</p>
+            <p>Bienvenue cher visiteur, mon créateur est en train de m'adapter sur téléphone et tablette.
+            Vous pouvez cependant venir me voir sur votre ordinateur.</p>
+            <p>Merci de votre compréhension et à très vite!</p>
             <div class="works">
                 <i class="fas fa-wrench fa-5x"></i>
             </div>
@@ -67,44 +67,49 @@
             <div class="banner">
                 <div id="particles-js"></div>
                 <div class="banner-content">
-                    <h1 class="title"> Lucas Vigni | Développeur web</h1>
-                    <hr class="divider">
+                    <div  class="title-container" >
+                        <h1 class="title"> Lucas VIGNI </h1>
+                        <span>|</span>
+                        <h1 class="title">Développeur web</h1>
+                    </div>
+                        
+                    <hr class="divider"  id="home-ancre-menu" >
                     <h2 id="subtitle"></h2>
-                    <a href="#projects-anchor" id="home-ancre-menu" class="btn-home">
+                    <!-- <a href="#projects-anchor" class="btn-home" >
                         <button type="button" class="btn">MES PROJETS</button>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>
 
         <!-- about - A propos-->
 
-        <section id="about-anchor">
-            <div class="about-content">
+        <section id="about-anchor" >
+            <div class="about-content" >
                 <div class="title-about display-title">
                     <h1>Introduction</h1>
                 </div>
                 <div class="container-fluid ">
                     <div class="row">
-                        <div class="about">
-                            <div class="container-about col-6">
-                                <div class="text-content  display-move">
-                                    <div class="text">
+                        <div class="about display-move" id="about-ancre-menu">
+                            <div class="container-about">
+                                <div class="text-content">
+                                    <div class="text" >
                                         <p>Je m’appelle VIGNI Lucas, âgé de 21 ans, je suis en premiére année de master
-                                            "Concepteur en Architecture Informatique" . Cette formation m'est proposée par le
-                                            Conservatoire National des Arts et Métiers via le lycée privée Saint-Vincent à 
+                                            "Concepteur en architecture informatique". Cette formation m'est proposée par le
+                                            Conservatoire National des Arts et Métiers via le lycée privé Saint-Vincent à 
                                             Senlis.</p>
                                         <p>Passionné d'informatique depuis toujours, le plaisir d'accumuler des compétences dans ce domaine
                                             ainsi que de rencontrer des difficultés ne me lasse pas. C'est pour ces raisons que j'envisage de devenir 
-                                            developpeur web full stack et d'obtenir le titre d'ingénieur .</p>
+                                            developpeur web full stack et d'obtenir le titre d'ingénieur.</p>
                                     </div>
-                                    <div class="plus ">
-                                        <a target="_blank" href="img/CV2019LV.pdf" class="btn cv">Télécharger mon CV</a>
+                                    <div class="plus" >
+                                        <a target="_blank"  href="img/CV2019LV.pdf" class="btn cv">Télécharger mon CV</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="container-picture col-6" id="about-ancre-menu">
-                                <div class="picture display-move ">
+                            <div class="container-picture" >
+                                <div  class="picture" >
                                     <img src="img/photo.jpg" alt="">
                                 </div>
                             </div>
@@ -116,38 +121,45 @@
 
         <!-- timeline - chronologie -->
 
-        <div class="title-timeline display-title" id="timeline-anchor">
+        <div class="title-timeline display-title" >
             <div class="title">
                 <h1>Formations - Expériences pro </h1>
             </div>
         </div>
 
-        <div class="block">
-            <section class="timeline">
-                <div id="content-timeline">
+        <div class="block" id="timeline-anchor" >
+            <section class="timeline" >
+                <div id="content-timeline" >
                     <ul>
                         <li>
                             <div>
-                                <time>BAC STI2D (ITEC) - Juillet 2016</time>
-                                <p>Lycée Marie Curie à Nogent sur Oise</p>
-
+                                <time>Master Concepteur en Architecture Informatique - 2019/2020</time>
+                                <p>Conservatoire national des arts et métiers</p>
+                                - ReactJS</br>
+                                - PHP7 - JavaScript - SQL - HTML5 - CSS3 - C#</br>
+                                - Tests et validation de logiciel - Ingénierie de la qualité - Management des
+                                entreprises -
+                                Programmation fonctionnelle ReactJS
                             </div>
                         </li>
                         <li>
                             <div>
-                                <time>Lenormant Manutention - 2017 </br>(4 semaines)</time>
-                                <p>Montataire</p>
-                                - Techno : PHP7 </br>
-                                - Tâches : Maintenance évolutive - Installation hardware/software
+                                <time>Licence Générale Informatique option Web- Juillet 2019</time>
+                                <p>Conservatoire national des arts et métiers</p>
+                                - Symfony 4 - Angular 7</br>
+                                - PHP7 - TypeScript - Javascript - SQL - CSS3 - HTML5 </br>
+                                - Méthode Agile (SCRUM) - Intégration - UX/UI
                             </div>
+                    
                         </li>
                         <li>
                             <div>
-                                <time>Stage à Avr Solutions - 2018 </br>(7 semaines)</time>
-                                <p>Beauvais</p>
-                                - Techno : JavaScipt(Nightmare.js)</br>
-                                - Tâches : Tests fonctionnels
+                                <time>Alternance à Oxylead - 2018/2019</br> (6 mois)</time>
+                                <p>17ème arrondissement de Paris</p>
+                                - Techno : SQL - JavaScript - C# </br>
+                                - Tâches : MCO - Maintenance évolutive - Relation client sur le CRM Microsoft Dynamics 2016
                             </div>
+                    
                         </li>
                         <li>
                             <div>
@@ -160,34 +172,25 @@
                         </li>
                         <li>
                             <div>
-                                <time>Alternance à Oxylead - 2018/2019</br> (6 mois)</time>
-                                <p>17ème arrondissement de Paris</p>
-                                - Techno : SQL - JavaScript - C# </br>
-                                - Tâches : MCO - Maintenance évolutive - Relation client sur  le CRM Microsoft Dynamics 2016
+                                <time>Stage à Avr Solutions - 2018 </br>(7 semaines)</time>
+                                <p>Beauvais</p>
+                                - Techno : JavaScipt(Nightmare.js)</br>
+                                - Tâches : Tests fonctionnels
                             </div>
                         </li>
                         <li>
                             <div>
-                                <time>Licence Générale Informatique option Web- Juillet 2019</time>
-                                <p>Conservatoire national des arts et métiers</p>
-                                - Symfony 4 - Angular 7</br>
-                                - PHP7 - TypeScript - Javascript - SQL - CSS3 - HTML5 </br>
-                                - Méthode Agile (SCRUM) - Intégration - UX/UI
-
-
+                                <time>Lenormant Manutention - 2017 </br>(4 semaines)</time>
+                                <p>Montataire</p>
+                                - Techno : PHP7 </br>
+                                - Tâches : Maintenance évolutive - Installation hardware/software
                             </div>
                         </li>
-
+                    
                         <li id="about-timeline-menu">
                             <div>
-                                <time>Master Concepteur en Architecture Informatique - 2019/2020</time>
-                                <p>Conservatoire national des arts et métiers</p>
-                                - ReactJS</br>
-                                - PHP7 - JavaScript - SQL - HTML5 - CSS3 - C#</br>
-                                - Tests et validation de logiciel - Ingénierie de la qualité - Management des
-                                entreprises -
-                                Programmation fonctionnelle ReactJS
-
+                                <time>BAC STI2D (ITEC) - Juillet 2016</time>
+                                <p>Lycée Marie Curie à Nogent sur Oise</p>
                             </div>
                         </li>
                     </ul>
