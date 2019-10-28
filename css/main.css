@@ -405,8 +405,7 @@ hr.divider{
  
 #about-anchor{
   background-color: #eaeaea ;
-    height: 500px;
-    height: 640px;
+  height: 600px;
 }
 
 .about-content{
@@ -793,7 +792,6 @@ height: 150px;
   width: 260px;
   height: 110px;
   box-shadow: 7px 7px rgba(0,0,0,0);
-  
 }
 
 .filterDiv .overlay {
@@ -921,7 +919,9 @@ height: 150px;
 
 .projects .modale.opened .modale-container .intro{
   margin-top: 10px;
-
+ }
+ .projects .modale.opened .modale-container .intro #intro-easyCode{
+  list-style-type: none;
  }
 
 .projects .modale.opened .modale-container h3{
@@ -1198,34 +1198,166 @@ background: rgba(0, 0, 0, 0.8);
   height: 40px;
   width: 40px;
 }
+
 /* --------------- */
 /* Only Desktop */
 /* --------------- */
 
-/* Extra small devices (phones, 767px and down) */
-@media(min-width: 376px) {
+@media(min-width: 1025px) {
   .error{
     display: none ;
-    
   }
-  
-} 
+  .tiret{
+    display:none;
+  }
+}
 
+/* Ipad portrait */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+.error{
+  display: none;
+}
+.tiret{
+  display:block;
+}
+.pipe{
+  display: none;
+}
 
+.banner .banner-content .title-container h1 {
+  font-size: 2.3em;
+}
 
+.about-content .title-about {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.header .header-logo-home {
+  float: left;
+  margin-left: 40px;
+  margin-top: 10px;
+  width: 80px;
+  height: 80px;
+}
+.banner .banner-content .title-container .pipe {
+  font-size: 2.5em;
+}
+.banner .banner-content h2 {
+  font-size: 1.7em;
+}
+
+.header .header-menu-home a {
+  font-size: 0.9em;
+}
+
+#about-anchor {
+  background-color: #eaeaea;
+  height: 120%;
+}
+
+.about-content .container-about .text-content {
+  align-items: center;
+}
+.about-content .container-about {
+  width: 100%;
+}
+.about-content .about {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-content .container-about .plus {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+.about-content .about .container-picture .picture img {
+  margin-left: 30px;
+  margin-top: 50px;
+  display: none;
+}
+.filterDiv .image {
+  width: 200px;
+  height: 80px;
+}
+
+.about-content .title-about h1 {
+  font-size: 2.2em;
+}
+
+.about-content .container-about .text p{
+  font-size: 0.9em;
+}
+.display-projects.in-view {
+  display:flex;
+  width: 70%;
+  justify-content: space-around;
+}
+.filterDiv{
+  margin-top: 50px;
+  width: 210px;
+  height: 90px;
+}
+.filterDiv:nth-child(even){
+  margin-left: 50px;
+}
+/* TIMELINE */
+.timeline {
+  height: 100%;
+  margin-bottom: 40px;
+}
+
+#projects-anchor {
+  height: 620px;
+}
+
+.projects-photo {
+  width: 100%;
+  margin-top: 20px;
+
+}
+.hobbies-content .hobbies-container {
+  width: 70%;
+}
+.hobbies-content .hobbies-container .hobbies {
+  padding-left: 20px;
+}
+.title-timeline .title h1{
+  font-size: 2.2em;
+}
+
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(5px, 0, 0);
+}
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-5px, 0, 0);
+text-align: right;
+}
+.timeline ul li div {
+  transform: translate3d(-5px, 0, 0);
+  font-size: 0.9em;
+}
+
+.timeline ul li div time{
+  font-size: 1.1em;
+}
+}
 
 /* --------------- */
-/* Only Mobile */
+/* TELEPHONE PORTRAIT */
 /* --------------- */
 
-/* Extra small devices (phones, 376px and down) */
-@media (max-width: 376px) {
+@media (max-width : 767px) {
+  /* Styles */
   body{
     max-width: 100%;
   }
   .error{
   display: block;
-  background: #282828;
+  background-color: #282828;
   margin:0;
   width: 100%;
   height: 100%;
@@ -1251,4 +1383,6 @@ background: rgba(0, 0, 0, 0.8);
     padding-top: 100px;
     color: #FFAB00;
   }
-} 
+}
+
+
