@@ -8,13 +8,10 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="hamburgers-master/dist/hamburgers.css" rel="stylesheet">
 
 
     <!-- CSS -->
-
-    <!-- SCSS -->
-    <link rel="stylesheet" href="sass/style.css">
-    <!-- SCSS -->
     <script src="https://kit.fontawesome.com/de8a66591c.js" crossorigin="anonymous"></script>
     <!-- Font -->
     <link
@@ -50,6 +47,11 @@
         <div class="block">
             <header class="header" id="isFixed">
                 <a href="#home-anchor"> <img id="logoImgHeader" src="img/logo-black.png" class="header-logo-home" alt=""></a>
+                <button class="hamburger hamburger--collapse" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                  </button> 
                 <nav class="header-menu-home" id="nav-ydefault">
                     <ul>
                         <li><a href="#about-anchor">A PROPOS</a></li>
@@ -718,17 +720,11 @@
 <script src="js/typeit.min.js"></script>
 <script src="js/application.js"></script>
 <script src="js/typeIt.js"></script>
-<script src="js/sticker.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-<script>
-    window.onload = function () {
-        Sticker.init('.sticker');
-    }
-</script>
 
 <script>
     // Empeche le défilement du slider bootstrap
